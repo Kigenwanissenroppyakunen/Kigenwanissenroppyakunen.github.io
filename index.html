@@ -34,7 +34,7 @@
     <!-- 상태 알림 배너 (API 키 미입력 시 표시) -->
     <div id="demo-banner" class="hidden mb-6 bg-amber-50 border border-amber-200 text-amber-800 px-4 py-3 rounded-xl text-sm flex justify-between items-center">
       <div>
-        <strong>데모 모드 실행 중:</strong> 현재 샘플 데이터가 표시되고 있습니다. 실제 실시간 데이터를 보려면 코드 내 <code>API_KEY</code> 변수에 열린국회정보 인증키를 입력하세요.
+        <strong>실행 중:</strong> 현재 실시간 데이터가 표시되고 있습니다. 감사합니다.
       </div>
     </div>
 
@@ -78,46 +78,6 @@
     const API_URL = `https://open.assembly.go.kr/portal/openapi/nzmimeepazxkubdpn`;
 
     let allBills = [];
-
-    // 테스트용 샘플 데이터 (API 키가 없거나 CORS 차단 시 자동 실행)
-    const MOCK_BILLS = [
-      {
-        BILL_NO: "2205812",
-        BILL_NAME: "인공지능 발전과 신뢰 기반 조성 등에 관한 기본법 일부개정법률안",
-        PROPOSER: "홍길동 의원 등 12인",
-        PROPOSE_DT: "2026-11-23",
-        COMMITTEE: "과학기술정보방송통신위원회",
-        PROC_RESULT: "소관위 심사중",
-        DETAIL_LINK: "https://assembly.go.kr"
-      },
-      {
-        BILL_NO: "2205811",
-        BILL_NAME: "근로기준법 일부개정법률안",
-        PROPOSER: "김철수 의원 등 10인",
-        PROPOSE_DT: "2026-11-23",
-        COMMITTEE: "환경노동위원회",
-        PROC_RESULT: "접수",
-        DETAIL_LINK: "https://assembly.go.kr"
-      },
-      {
-        BILL_NO: "2205810",
-        BILL_NAME: "조세특례제한법 일부개정법률안",
-        PROPOSER: "이영희 의원 등 15인",
-        PROPOSE_DT: "2026-11-22",
-        COMMITTEE: "기획재정위원회",
-        PROC_RESULT: "접수",
-        DETAIL_LINK: "https://assembly.go.kr"
-      },
-      {
-        BILL_NO: "2205809",
-        BILL_NAME: "도로교통법 일부개정법률안",
-        PROPOSER: "박민수 의원 등 11인",
-        PROPOSE_DT: "2026-11-21",
-        COMMITTEE: "행정안전위원회",
-        PROC_RESULT: "소관위 회부",
-        DETAIL_LINK: "https://assembly.go.kr"
-      }
-    ];
 
     async function fetchBills() {
       const loadingEl = document.getElementById('loading');
